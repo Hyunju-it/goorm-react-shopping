@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import { store } from './store';
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { store, RootState } from './store';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
@@ -10,6 +10,7 @@ import './index.css';
 
 const AppContent: React.FC = () => {
   const dispatch = useDispatch();
+  const { isCartOpen } = useSelector((state: RootState) => state.ui);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChange((user) => {
@@ -28,8 +29,8 @@ const AppContent: React.FC = () => {
       <Header />
       <main>
         <ProductList />
-        <Cart />
       </main>
+      {isCartOpen && <Cart />}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../store';
 import { logout } from '../store/authSlice';
+import { toggleCart } from '../store/uiSlice';
 import LoginModal from './LoginModal';
 import { logout as authLogout } from '../services/authService';
 
@@ -28,14 +29,14 @@ const Header: React.FC = () => {
         <nav className="nav">
           <div className="logo">Shop</div>
           <div className="nav-icons">
-            <button className="icon-btn" title="Cart">
+            <button className="icon-btn" onClick={() => dispatch(toggleCart())} title="Cart">
               🛒
               {cartItemCount > 0 && <span className="cart-badge">{cartItemCount}</span>}
             </button>
             {user ? (
               <>
                 <button className="icon-btn" title="User">👤</button>
-                <button className="icon-btn" onClick={handleLogout} title="Logout">📋</button>
+                <button className="icon-btn" onClick={handleLogout} title="Logout">🚪</button>
               </>
             ) : (
               <button className="icon-btn" onClick={() => setShowLoginModal(true)} title="Login">👤</button>
