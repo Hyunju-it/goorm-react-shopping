@@ -32,22 +32,43 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #2563eb;
+  color: #6366f1;
 }
 
-.nav-links {
+.nav-icons {
   display: flex;
-  list-style: none;
-  gap: 2rem;
   align-items: center;
+  gap: 1rem;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #dc2626;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
 }
 
 .btn {
@@ -210,4 +231,44 @@ body {
   background: #fef2f2;
   border-radius: 0.25rem;
   margin: 1rem 0;
+}
+
+/* Category Filter Styles */
+.category-filter {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.75rem 2rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.category-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.category-btn.active {
+  background: #6b7280;
+  color: white;
+  border-color: #6b7280;
+}
+
+/* Product Count Styles */
+.product-count {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }

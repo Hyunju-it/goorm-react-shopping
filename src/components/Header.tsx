@@ -26,29 +26,21 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container">
         <nav className="nav">
-          <div className="logo">React Shopping</div>
-          <ul className="nav-links">
-            <li><a href="#products">Products</a></li>
-            <li>
-              <a href="#cart">Cart ({cartItemCount})</a>
-            </li>
+          <div className="logo">Shop</div>
+          <div className="nav-icons">
+            <button className="icon-btn" title="Cart">
+              🛒
+              {cartItemCount > 0 && <span className="cart-badge">{cartItemCount}</span>}
+            </button>
             {user ? (
               <>
-                <li>Hello, {user.email}</li>
-                <li>
-                  <button className="btn btn-secondary" onClick={handleLogout}>
-                    Logout
-                  </button>
-                </li>
+                <button className="icon-btn" title="User">👤</button>
+                <button className="icon-btn" onClick={handleLogout} title="Logout">📋</button>
               </>
             ) : (
-              <li>
-                <button className="btn btn-primary" onClick={() => setShowLoginModal(true)}>
-                  Login
-                </button>
-              </li>
+              <button className="icon-btn" onClick={() => setShowLoginModal(true)} title="Login">👤</button>
             )}
-          </ul>
+          </div>
         </nav>
       </div>
       {showLoginModal && (

@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           onClick={handleAddToCart}
           style={{width: '100%'}}
         >
-          Add to Cart
+          장바구니에 담기
         </button>
       </div>
     </div>
