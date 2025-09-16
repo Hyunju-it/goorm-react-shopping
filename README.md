@@ -32,14 +32,14 @@ npm install
 ```
 
 ### 2. Firebase 설정
-1. `.env.example` 파일을 `.env`로 복사
-2. Firebase 프로젝트 생성 후 설정 정보 입력:
+**보안상의 문제로 `.env` 파일은 리포지토리에 포함되지 않았습니다.**
+
+프로젝트를 실행하기 위해서는 루트 디렉토리에 `.env` 파일을 생성하고 Firebase 프로젝트 생성 후 설정 정보를 입력해주세요:
+
 ```env
 VITE_FIREBASE_API_KEY=your_api_key_here
 VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
 ```
 
