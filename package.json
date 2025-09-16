@@ -1,0 +1,37 @@
+{
+  "name": "goorm-react-shopping",
+  "version": "1.0.0",
+  "description": "![react-shopping.gif](img/react-shopping.gif) 위의 이미지와 똑같이 구현 - [ ] 리덕스와 같은 상태 관리 라이브러리를 이용해서 상태를 관리 - [ ] 로그인 기능은 파이어베이스의 인증 서비스를 이용 - [ ] 타입스크립트를 이용해서 구현 - [ ] 상품 데이터는 fakestoreapi 를 이용해서 구현 (예를 들어서 상품들을 가져오려면 HTTP GET  https://fakestoreapi.com/products)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyunju-it/goorm-react-shopping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyunju-it/goorm-react-shopping/issues"
+  },
+  "homepage": "https://github.com/Hyunju-it/goorm-react-shopping#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "firebase": "^12.2.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "vite": "^7.1.5"
+  }
+}
